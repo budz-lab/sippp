@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>WebGIS Pelayanan SD Kota Malang</title>
+
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+<link rel="stylesheet"
+href="css/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div id="sidebar">
+
+<h1>WebGIS Pelayanan SD Kota Malang</h1>
+
+<div class="card">
+
+<h3>Statistik</h3>
+
+<p>Total SD :
+<b id="totalSD">0</b></p>
+
+<p>SD Negeri :
+<b id="sdNegeri">0</b></p>
+
+<p>SD Swasta :
+<b id="sdSwasta">0</b></p>
+
+<p>Kelurahan :
+<b id="totalDesa">0</b></p>
+
+<p>Cluster :
+<b id="totalCluster">0</b></p>
+
+<p>Rata-rata Pelayanan :
+<b id="avgPelayanan">0%</b></p>
+
+</div>
+
+<div class="card">
+
+<h3>Pencarian SD</h3>
+
+<input
+type="text"
+id="searchInput"
+placeholder="Cari nama sekolah">
+
+</div>
+
+<div class="card">
+
+<h3>Filter Status</h3>
+
+<select id="statusFilter">
+
+<option value="all">
+Semua
+</option>
+
+<option value="Negeri">
+Negeri
+</option>
+
+<option value="Swasta">
+Swasta
+</option>
+
+</select>
+
+</div>
+
+<div class="card">
+
+<h3>Legenda Cluster</h3>
+
+<div><span class="c0"></span> Cluster 0</div>
+<div><span class="c1"></span> Cluster 1</div>
+<div><span class="c2"></span> Cluster 2</div>
+<div><span class="c3"></span> Cluster 3</div>
+<div><span class="c4"></span> Cluster 4</div>
+
+</div>
+
+<div class="card">
+<h3>Negeri vs Swasta</h3>
+<canvas id="chartStatus"></canvas>
+</div>
+
+<div class="card">
+<h3>Jumlah SD per Cluster</h3>
+<canvas id="chartCluster"></canvas>
+</div>
+
+<div class="card">
+<h3>Top 10 Kelurahan Terlayani</h3>
+<canvas id="chartKelurahan"></canvas>
+</div>
+
+<div class="card">
+<h3>Kategori Pelayanan</h3>
+<canvas id="chartKategori"></canvas>
+</div>
+
+</div>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
